@@ -8,18 +8,17 @@ const agent = new https.Agent({
 
 async function writeContract() {
   const resp = await fetch(
-    "https://localhost:3005/contract/mumbai/0xe899877b5363A28b4df29fb9610F116c946b522e/write",
+    "https://localhost:3005/contract/mumbai/<contract_address>/write",
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer <access_token>",
-        "x-backend-wallet-address":
-          "0xdc63ac3b4676cf6d7be02c47e704460bf70988ef",
+        "x-backend-wallet-address": "<backend_wallet_address>",
       },
       body: JSON.stringify({
-        function_name: "burn",
-        args: ["0"],
+        functionName: "<function>",
+        args: ["<arg1>", "<arg2>", "<arg3>"],
       }),
       agent: agent,
     }

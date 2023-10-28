@@ -8,7 +8,7 @@ const agent = new https.Agent({
 
 async function getWalletBalance() {
   const resp = await fetch(
-    "https://localhost:3005/backend-wallet/mumbai/0xa08832afda063bddca5f146ae279545dbd34df14/get-balance",
+    "https://localhost:3005/backend-wallet/mumbai/<backend_wallet_address>/get-balance",
     {
       headers: {
         Authorization: "Bearer <access_token>",

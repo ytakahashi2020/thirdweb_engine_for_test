@@ -8,7 +8,7 @@ const agent = new https.Agent({
 
 async function readContract() {
   const resp = await fetch(
-    "https://localhost:3005/contract/mumbai/0xe899877b5363A28b4df29fb9610F116c946b522e/read?function_name=balanceOf&args=0xBc62697F318A7A19A7167b78e1d570FF80829277",
+    "https://localhost:3005/contract/mumbai/<contract_address>/read?functionName=<function_name>&args=<args>",
     {
       headers: {
         Authorization: "Bearer <access_token>",
